@@ -1,0 +1,36 @@
+.signupcontainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .signupchildconatiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+
+    .signupform {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+
+      .link {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .forminp {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #f3f3f3;
+      outline: none;
+      margin-bottom: 10px;
+    }
+  }
+}

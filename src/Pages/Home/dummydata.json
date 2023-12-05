@@ -1,0 +1,63 @@
+[
+    {
+      "slno": 1,
+      "app_name": "SocialConnect",
+      "email": "user1@example.com",
+      "password": "password123"
+    },
+    {
+      "slno": 2,
+      "app_name": "MessengerApp",
+      "email": "user2@example.com",
+      "password": "securepass456"
+    },
+    {
+      "slno": 3,
+      "app_name": "PhotoShare",
+      "email": "user3@example.com",
+      "password": "mypics789"
+    },
+    {
+      "slno": 4,
+      "app_name": "TaskManager",
+      "email": "user4@example.com",
+      "password": "tasks2023"
+    },
+    {
+      "slno": 5,
+      "app_name": "ExpenseTracker",
+      "email": "user5@example.com",
+      "password": "moneywise456"
+    },
+    {
+      "slno": 6,
+      "app_name": "FitnessApp",
+      "email": "user6@example.com",
+      "password": "fitlife123"
+    },
+    {
+      "slno": 7,
+      "app_name": "RecipeBook",
+      "email": "user7@example.com",
+      "password": "recipes789"
+    },
+    {
+      "slno": 8,
+      "app_name": "NewsReader",
+      "email": "user8@example.com",
+      "password": "news2023"
+    },
+    {
+      "slno": 9,
+      "app_name": "TravelPlanner",
+      "email": "user9@example.com",
+      "password": "travelbug456"
+    },
+    {
+      "slno": 10,
+      "app_name": "MusicPlayer",
+      "email": "user10@example.com",
+      "password": "melodies123"
+    }
+  ]
+  
