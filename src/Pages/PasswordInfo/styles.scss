@@ -1,0 +1,52 @@
+.recorddata {
+  background: lightgray;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.recordinpdiv {
+  position: relative;
+  width: 100%;
+}
+
+.recorddatainput {
+  background: lightgray;
+  padding: 10px 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: #000;
+  width: 100%;
+}
+
+.inpeyeicon {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.backarrow {
+  cursor: pointer;
+}
+
+.viewpassworddiv {
+  position: relative;
+
+  .iconclass {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+  }
+}
+
+.inputag {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #f3f3f3;
+  outline: none;
+}

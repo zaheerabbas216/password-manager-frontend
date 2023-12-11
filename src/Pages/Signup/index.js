@@ -1,12 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.scss";
 import { useNavigate } from "react-router-dom";
+import { SignupService } from "../../Services/AuthService";
+import Swal from "sweetalert2";
 
 const Signup = () => {
   const navigate = useNavigate();
 
+  const [signupform, setsignupform] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
   const gobacktologin = () => {
     navigate("/");
+  };
+
+  const onInputChange = (e) => {
+    let { name, value } = e.target;
+
+    if (name === "username") {
+      setsignupform({ ...signupform, username: value });
+    }
+
+    if (name === "email") {
+      setsignupform({ ...signupform, email: value });
+    }
+
+    if (name === "password") {
+      setsignupform({ ...signupform, password: value });
+    }
+  };
+
+  const signupfunction = async () => {
+    let payload = {
+      username: signupform.username,
+      email: signupform.email,
+      password: signupform.password,
+    };
+
+    let result = await SignupService(payload);
+
+    if (result.status === 200) {
+      Swal.fire({
+        icon: "success",
+        title: "Created User",
+        text: "User created successfully",
+      });
+      navigate("/");
+    } else if (result.response.status === 400) {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: `${result.response.data.message}`,
+      });
+    }
   };
 
   return (
@@ -27,6 +76,7 @@ const Signup = () => {
                 id="username"
                 placeholder="Enter Username"
                 className="forminp"
+                onChange={onInputChange}
               />
 
               <label htmlFor="">Email</label>
@@ -36,6 +86,7 @@ const Signup = () => {
                 id="email"
                 placeholder="Enter email"
                 className="forminp"
+                onChange={onInputChange}
               />
 
               <label htmlFor="">Password</label>
@@ -45,9 +96,12 @@ const Signup = () => {
                 id="password"
                 placeholder="Enter password"
                 className="forminp"
+                onChange={onInputChange}
               />
 
-              <button className="btn btn-success">Signup</button>
+              <button className="btn btn-success" onClick={signupfunction}>
+                Signup
+              </button>
 
               <p className="my-2">
                 <a className="link" onClick={gobacktologin}>
